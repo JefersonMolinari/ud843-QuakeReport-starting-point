@@ -34,10 +34,12 @@ public class EarthquakeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.earthquake_activity);
 
+        ListView listView = (ListView) findViewById(R.id.list);
+
         ArrayList<Earthquake> earthquakes = QueryUtils.extractEarthquakes();
 
         final EarthAdapter adapter = new EarthAdapter(this, earthquakes);
-        ListView listView = (ListView) findViewById(R.id.list);
+
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
