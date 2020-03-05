@@ -13,14 +13,14 @@ import android.widget.TextView;
 
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class EarthAdapter extends ArrayAdapter<Earthquake> {
 
     private static final String LOCATION_SEPARATOR = " of ";
 
-    public EarthAdapter (Context context, ArrayList<Earthquake> objects){
+    public EarthAdapter (Context context, List<Earthquake> objects){
         super(context, 0, objects);
     }
 
